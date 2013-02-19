@@ -19,7 +19,7 @@ module Bcdatabase
     end
 
     def encrypt(s)
-      Base64.encode64(encipher(:encrypt, s)).strip
+      Base64.strict_encode64(encipher(:encrypt, s)).strip
     end
 
     def decrypt(s)
