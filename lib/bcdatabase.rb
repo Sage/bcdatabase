@@ -35,7 +35,7 @@ module Bcdatabase
     # based on http://snippets.dzone.com/posts/show/576
     def encipher(direction, s)
       # the order of operations here is very important
-      c = OpenSSL::Cipher::Cipher.new(CIPHER)
+      c = OpenSSL::Cipher.new(CIPHER)
       c.send direction
       c.key = pass
       t = c.update(s)
